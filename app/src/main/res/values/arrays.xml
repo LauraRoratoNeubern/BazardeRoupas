@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nomeVendedoras">
+        <item>Laura Rorato</item>
+        <item>Gabi Albanez</item>
+        <item>Nani</item>
+        <item>Mari Branco</item>
+        <item>Maria Engler</item>
+    </string-array>
+
+    <string-array name="cores">
+        <item>Amarelo</item>
+        <item>Azul</item>
+        <item>Azul Marinho / Anil</item>
+        <item>Bordô</item>
+        <item>Branco</item>
+        <item>Cinza</item>
+        <item>Creme</item>
+        <item>Dourado</item>
+        <item>Fúcsia</item>
+        <item>Laranja</item>
+        <item>Lilás</item>
+        <item>Marrom</item>
+        <item>Off white</item>
+        <item>Prateado</item>
+        <item>Preto</item>
+        <item>Rosa</item>
+        <item>Rosa bebe</item>
+        <item>Rosa pink</item>
+        <item>Roxo</item>
+        <item>Salmão</item>
+        <item>Terra cota</item>
+        <item>Verde</item>
+        <item>Verde água</item>
+        <item>Verde oliva</item>
+        <item>Verde Tiffany</item>
+        <item>Vermelho</item>
+        <item>Violeta</item>
+    </string-array>
+
+    <string-array name="estampas">
+        <item>Animal print</item>
+        <item>Etnica</item>
+        <item>Florido</item>
+        <item>Listras</item>
+        <item>Liso</item>
+        <item>Outra</item>
+        <item>Poá</item>
+        <item>Tweed</item>
+        <item>Xadrez</item>
+        </string-array>
+
+</resources>

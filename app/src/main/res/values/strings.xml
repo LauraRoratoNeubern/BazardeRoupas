@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">ControlePecasBazar</string>
+    <string name="tituloPagCadastro">CADASTRO DE PEÇAS</string>
+    <string name="vazio">" "</string>
+
+    // Avisos de Erro
+    <string name="erro_vazio_categoria">A Categoria não pode ser vazia!</string>
+    <string name="erro_vazio_cor">A Cor não pode ser vazia!</string>
+    <string name="erro_vazio_valorVenda">O valor de venda não pode ser vazia!</string>
+    <string name="nenhuma_opcao_selecionada">Nenhuma opção selecionada</string>
+
+    // TextView
+    <string name="nome">Nome do cadastrador: \n</string>
+    <string name="estado">"Estado da peça: "</string>
+    <string name="cor">"Cor predominante: "</string>
+    <string name="valor_venda">"Valor de venda: "</string>
+    <string name="categoria">Categoria: </string>
+    <string name="estampa">Estampa: </string>
+    <string name="checkboxUsado">Usado</string>
+    <string name="checkBoxNovo">Novo</string>
+
+    // Botoes
+    <string name="cadastrar">Cadastrar</string>
+    <string name="limpar">Limpar tudo</string>
+
+    // Mensagem TOAST
+    <string name="mensagem_cadastro">Peça cadastrada!</string>
+    <string name="mensagem_limpeza">Campos limpos!</string>
+    <string name="foi_selecionada">" foi selecionada"</string>
+    <string name="foram_selecionados">Foram selecionados</string>
+
+    // Categorias
+    <string name="acessorio">Acessorio</string>
+    <string name="calca">Calça</string>
+    <string name="shortsaia">Shorts/Saia</string>
+    <string name="camiseta">Camiseta/Cropped</string>
+    <string name="casaco">Casaco</string>
+    <string name="modapraia">Moda praia</string>
+    <string name="calcado">Calçado</string>
+    <string name="vestido">Vestido</string>
+
+</resources>

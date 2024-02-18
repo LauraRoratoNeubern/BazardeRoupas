@@ -1,53 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="nomeVendedoras">
-        <item>Laura Rorato</item>
-        <item>Gabi Albanez</item>
-        <item>Nani</item>
-        <item>Mari Branco</item>
-        <item>Maria Engler</item>
+        <item>@string/laura_rorato</item>
+        <item>@string/gabi_albanez</item>
+        <item>@string/laura_cadore</item>
+        <item>@string/mari_branco</item>
+        <item>@string/maria_engler</item>
+        <item>@string/duda_caldas</item>
+        <item>@string/isa_barp</item>
+        <item>@string/rafa_konig</item>
+        <item>@string/layal_hussein</item>
+        <item>@string/nani</item>
     </string-array>
 
     <string-array name="cores">
-        <item>Amarelo</item>
-        <item>Azul</item>
-        <item>Azul Marinho / Anil</item>
-        <item>Bordô</item>
-        <item>Branco</item>
-        <item>Cinza</item>
-        <item>Creme</item>
-        <item>Dourado</item>
-        <item>Fúcsia</item>
-        <item>Laranja</item>
-        <item>Lilás</item>
-        <item>Marrom</item>
-        <item>Off white</item>
-        <item>Prateado</item>
-        <item>Preto</item>
-        <item>Rosa</item>
-        <item>Rosa bebe</item>
-        <item>Rosa pink</item>
-        <item>Roxo</item>
-        <item>Salmão</item>
-        <item>Terra cota</item>
-        <item>Verde</item>
-        <item>Verde água</item>
-        <item>Verde oliva</item>
-        <item>Verde Tiffany</item>
-        <item>Vermelho</item>
-        <item>Violeta</item>
+        <item>@string/amarelo</item>
+        <item>@string/azul</item>
+        <item>@string/branco</item>
+        <item>@string/laranja</item>
+        <item>@string/marrom</item>
+        <item>@string/preto</item>
+        <item>@string/rosa</item>
+        <item>@string/roxo</item>
+        <item>@string/verde</item>
+        <item>@string/vermelho</item>
     </string-array>
 
     <string-array name="estampas">
-        <item>Animal print</item>
-        <item>Etnica</item>
-        <item>Florido</item>
-        <item>Listras</item>
-        <item>Liso</item>
-        <item>Outra</item>
-        <item>Poá</item>
-        <item>Tweed</item>
-        <item>Xadrez</item>
+        <item>@string/animal_print</item>
+        <item>@string/etnica</item>
+        <item>@string/florido</item>
+        <item>@string/listras</item>
+        <item>@string/liso</item>
+        <item>@string/poa</item>
+        <item>@string/tie_dye</item>
+        <item>@string/tweed</item>
+        <item>@string/xadrez</item>
+        <item>@string/outra</item>
         </string-array>
+
+    <string-array name="categoria">
+    <item>@string/acessorio</item>
+    <item>@string/bolsa</item>
+    <item>@string/calca</item>
+    <item>@string/shortsaia</item>
+    <item>@string/camiseta</item>
+    <item>@string/casaco</item>
+    <item>@string/modapraia</item>
+    <item>@string/calcado</item>
+    <item>@string/sueter</item>
+    <item>@string/vestido</item>
+    </string-array>
+
+    <string-array name="valores">
+        <item>60.00</item>
+        <item>55.00</item>
+        <item>50.00</item>
+        <item>45.00</item>
+        <item>40.00</item>
+        <item>35.00</item>
+        <item>30.00</item>
+        <item>25.00</item>
+        <item>20.00</item>
+        <item>15.00</item>
+    </string-array>
 
 </resources>

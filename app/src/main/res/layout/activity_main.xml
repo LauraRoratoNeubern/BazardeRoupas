@@ -14,11 +14,14 @@
 
         <TextView
             android:id="@+id/textViewCategoria"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="@string/categoria"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoCompleteVendedor" />
 
@@ -36,11 +39,14 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="@string/estampa"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroupCategorias" />
 
@@ -60,6 +66,8 @@
             android:id="@+id/checkBoxUsado"
             android:layout_width="91dp"
             android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/checkboxUsado"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +81,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="@string/checkBoxNovo"
             app:layout_constraintEnd_toStartOf="@+id/checkBoxUsado"
             app:layout_constraintHorizontal_bias="0.5"
@@ -81,12 +91,15 @@
 
         <RadioGroup
             android:id="@+id/radioGroupCategorias"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="@+id/textViewCategoria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCategoria">
 
             <RadioButton
@@ -163,11 +176,14 @@
 
         <TextView
             android:id="@+id/textViewNome"
-            android:layout_width="191dp"
+            android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="@string/vendedora"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
 
@@ -182,11 +198,14 @@
 
         <TextView
             android:id="@+id/textViewCor"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="@string/cor"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinnerEstampa" />
 
@@ -208,17 +227,22 @@
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             app:layout_constraintEnd_toEndOf="@+id/spinnerEstampa"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCor" />
 
         <TextView
             android:id="@+id/textViewValorVenda"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="@string/valor_venda"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBoxNovo" />
 
@@ -228,6 +252,8 @@
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:ems="10"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="@+id/autoCompleteCor"

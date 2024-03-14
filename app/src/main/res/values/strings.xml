@@ -19,10 +19,16 @@
     <string name="estampa">"Estampa: "</string>
     <string name="checkboxUsado">Usado</string>
     <string name="checkBoxNovo">Novo</string>
+    <string name="sobre">Sobre</string>
+    <string name="sobre_app">Aplicativo para controle particular de itens de bazar</string>
+    <string name="autor">Autor: Laura Rorato Maciel Neubern Souza</string>
 
     // Botoes
     <string name="cadastrar">Cadastrar</string>
-    <string name="limpar">Limpar tudo</string>
+    <string name="limpar">Limpar</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+
 
     // Mensagem TOAST
     <string name="mensagem_a_peca">"A peça "</string>
@@ -78,6 +84,5 @@
     <string name="tweed">Tweed</string>
     <string name="xadrez">Xadrez</string>
     <string name="outra">Outra</string>
-
 
 </resources>

@@ -25,18 +25,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoCompleteVendedor" />
 
-        <Button
-            android:id="@+id/buttonLimpar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:onClick="limparCampos"
-            android:text="@string/limpar"
-            app:layout_constraintEnd_toStartOf="@+id/buttonCancelar"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/buttonCadastrar"
-            app:layout_constraintTop_toBottomOf="@+id/editTextValorVenda" />
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
@@ -45,22 +33,12 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/estampa"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerEstampa"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroupCategorias" />
-
-        <Button
-            android:id="@+id/buttonCadastrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:onClick="cadastrar"
-            android:text="@string/salvar"
-            app:layout_constraintEnd_toStartOf="@+id/buttonLimpar"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextValorVenda" />
 
         <CheckBox
             android:id="@+id/checkBoxUsado"
@@ -254,8 +232,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
             android:ems="10"
             android:inputType="number|numberDecimal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/autoCompleteCor"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewValorVenda" />
@@ -270,18 +250,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
-
-        <Button
-            android:id="@+id/buttonCancelar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:onClick="cancelar"
-            android:text="@string/cancelar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/buttonLimpar"
-            app:layout_constraintTop_toBottomOf="@+id/editTextValorVenda" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

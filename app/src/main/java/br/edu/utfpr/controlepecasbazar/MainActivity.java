@@ -1,11 +1,15 @@
 package br.edu.utfpr.controlepecasbazar;
 
 import androidx.activity.result.ActivityResultLauncher;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,6 +17,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -32,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
     public static final String VALOR = "VALOR";
     public static final String ESTAMPA = "ESTAMPA";
     public static final String ESTADO = "ESTADO";
+
+    public static final String MODO = "MODO";
+    public static final int SEMEDICAO = 1;
+    public static final int EDITAR = 2;
+    private int modo;
+
+    private String vendedorOriginal;
+    private String categoriaOriginal;
+    private String corOriginal;
+    private float valorOriginal;
+    private String estampaOriginal;
+    private String estadoOriginal;
 
 
     @Override
@@ -56,10 +73,79 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapterCor = ArrayAdapter.createFromResource(this, R.array.cores, android.R.layout.simple_dropdown_item_1line);
         autoCompleteCor.setAdapter(adapterCor);
 
+        //botao Up
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
+        //Editar campos
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        if(bundle != null){
+            modo = bundle.getInt(MODO, SEMEDICAO);
+
+            if(modo == SEMEDICAO){
+                setTitle(getString(R.string.nova_peca));
+            } else if(modo == EDITAR){
+                setTitle(getString(R.string.editar_peca));
+
+                vendedorOriginal = bundle.getString(VENDEDORA);
+                autoCompleteVendedora.setText(vendedorOriginal);
+                autoCompleteVendedora.setSelection(autoCompleteVendedora.getText().length());
+
+                corOriginal = bundle.getString(COR);
+                autoCompleteCor.setText(corOriginal);
+                autoCompleteCor.setSelection(autoCompleteCor.getText().length());
+
+                valorOriginal = bundle.getFloat(VALOR);
+                editTextValorVenda.setText(Float.toString(valorOriginal));
+                editTextValorVenda.setSelection(editTextValorVenda.getText().length());
+
+                estadoOriginal = bundle.getString(ESTADO);
+                if (estadoOriginal != null) {
+                    if (estadoOriginal.equals(getString(R.string.checkboxUsado))) {
+                        cbUsado.setChecked(true);
+                        cbNovo.setChecked(false);
+                    } else if (estadoOriginal.equals(getString(R.string.checkBoxNovo))) {
+                        cbNovo.setChecked(true);
+                        cbUsado.setChecked(false);
+                    }
+                }
+
+                categoriaOriginal = bundle.getString(CATEGORIA);
+                for (int i = 0; i < radioGroupCategorias.getChildCount(); i++) {
+                    RadioButton radioButton = (RadioButton) radioGroupCategorias.getChildAt(i);
+
+                    if (radioButton.getText().toString().equals(categoriaOriginal)) {
+                        radioButton.setChecked(true);
+                        break;
+                    }
+                }
+
+                estampaOriginal = bundle.getString(ESTAMPA);
+                if (estampaOriginal != null) {
+                    String[] arrayEstampas = getResources().getStringArray(R.array.estampas);
+
+                    for (int i = 0; i < arrayEstampas.length; i++) {
+                        if (arrayEstampas[i].equals(estampaOriginal)) {
+                            spinnerEstampa.setSelection(i);
+                            break;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
         popularSpinnerEstampas();
+
+        setTitle(R.string.tituloPagCadastro);
     }
 
-    public void limparCampos(View view){
+    public void limparCampos(){
         autoCompleteVendedora.setText(null);
         radioGroupCategorias.clearCheck();
         autoCompleteCor.setText(null);
@@ -73,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.mensagem_limpeza, Toast.LENGTH_LONG).show();
     }
 
-    public void cadastrar(View view){
+    public void cadastrar(){
         Intent intent = new Intent();
 
         //vendedora
@@ -189,11 +275,55 @@ public class MainActivity extends AppCompatActivity {
     public static void novaPeca(AppCompatActivity activity, ActivityResultLauncher<Intent> launcher){
         Intent intent = new Intent(activity, MainActivity.class);
 
+        intent.putExtra(MODO, SEMEDICAO);
+
         launcher.launch(intent);
     }
 
-    public void cancelar(View view){
+    public static void editarPeca(AppCompatActivity activity, ActivityResultLauncher<Intent> launcher, Pecas peca){
+        Intent intent = new Intent(activity, MainActivity.class);
+
+        intent.putExtra(MODO, EDITAR);
+        intent.putExtra(VENDEDORA, peca.getVendedora());
+        intent.putExtra(CATEGORIA, peca.getCategoria());
+        intent.putExtra(COR, peca.getCor());
+        intent.putExtra(VALOR, peca.getValor());
+        intent.putExtra(ESTADO, peca.getEstado());
+        intent.putExtra(ESTAMPA, peca.getEstampa());
+
+        launcher.launch(intent);
+    }
+
+    public void cancelar(){
         setResult(Activity.RESULT_CANCELED);
         finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.cadastro_opcoes, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int idMenuItem = item.getItemId();
+
+        if(idMenuItem == R.id.menuItemSalvar){
+            Toast.makeText(this, getString(R.string.salvar) + getString(R.string.foi_selecionada), Toast.LENGTH_LONG).show();
+            cadastrar();
+            return true;
+        } else if (idMenuItem == R.id.menuItemLimpar){
+            Toast.makeText(this, getString(R.string.limpar) + getString(R.string.foi_selecionada), Toast.LENGTH_LONG).show();
+            limparCampos();
+            return true;
+        } else if (idMenuItem == android.R.id.home){
+            Toast.makeText(this, getString(R.string.cancelar) + getString(R.string.foi_selecionada), Toast.LENGTH_LONG).show();
+            cancelar();
+            return true;
+        }else{
+            return super.onOptionsItemSelected(item);
+        }
     }
 }

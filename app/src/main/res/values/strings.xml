@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">ControlePecasBazar</string>
-    <string name="tituloPagCadastro">CADASTRO DE PEÇAS</string>
+    <string name="app_name">Controle de Pecas - Bazar</string>
+    <string name="tituloPagCadastro">Cadastro de Peças</string>
     <string name="vazio">" "</string>
+    <string name="titulo_home">Listagem das peças</string>
 
     // Avisos de Erro
     <string name="erro_vazio_categoria">A Categoria não pode ser vazia!</string>
@@ -84,5 +85,11 @@
     <string name="tweed">Tweed</string>
     <string name="xadrez">Xadrez</string>
     <string name="outra">Outra</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="addPeca">Adicionar peça</string>
+    <string name="editar">Editar\n</string>
+    <string name="excluir">Excluir</string>
+    <string name="nova_peca">Nova Peça</string>
+    <string name="editar_peca">Editar Peça</string>
 
 </resources>
